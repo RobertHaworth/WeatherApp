@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0DFC1D1DBEC9A600638903 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DFC1C1DBEC9A600638903 /* WeatherViewController.swift */; };
+		4A0DFC211DBEE70B00638903 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DFC201DBEE70B00638903 /* Weather.swift */; };
 		4AEDE07A1DBD6B0500AD8B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDE0791DBD6B0500AD8B60 /* AppDelegate.swift */; };
-		4AEDE07C1DBD6B0500AD8B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDE07B1DBD6B0500AD8B60 /* ViewController.swift */; };
 		4AEDE07F1DBD6B0600AD8B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEDE07D1DBD6B0500AD8B60 /* Main.storyboard */; };
 		4AEDE0811DBD6B0600AD8B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEDE0801DBD6B0600AD8B60 /* Assets.xcassets */; };
 		4AEDE0841DBD6B0600AD8B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEDE0821DBD6B0600AD8B60 /* LaunchScreen.storyboard */; };
@@ -18,9 +19,11 @@
 
 /* Begin PBXFileReference section */
 		47B762246F24C10EFCAF5FDB /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4A0DFC1C1DBEC9A600638903 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		4A0DFC201DBEE70B00638903 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		4A0DFC221DBEFB6E00638903 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4AEDE0761DBD6B0500AD8B60 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEDE0791DBD6B0500AD8B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AEDE07B1DBD6B0500AD8B60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AEDE07E1DBD6B0500AD8B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AEDE0801DBD6B0600AD8B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEDE0831DBD6B0600AD8B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,9 +66,10 @@
 		4AEDE0781DBD6B0500AD8B60 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				4A0DFC1C1DBEC9A600638903 /* WeatherViewController.swift */,
 				4AEDE0791DBD6B0500AD8B60 /* AppDelegate.swift */,
-				4AEDE07B1DBD6B0500AD8B60 /* ViewController.swift */,
 				4AEDE08B1DBD7CD700AD8B60 /* WeatherService.swift */,
+				4A0DFC201DBEE70B00638903 /* Weather.swift */,
 				4AEDE07D1DBD6B0500AD8B60 /* Main.storyboard */,
 				4AEDE0801DBD6B0600AD8B60 /* Assets.xcassets */,
 				4AEDE0821DBD6B0600AD8B60 /* LaunchScreen.storyboard */,
@@ -86,6 +90,7 @@
 		66D7DB215C9C8E3F8AC7D50E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A0DFC221DBEFB6E00638903 /* MapKit.framework */,
 				D944D5E8EF39252976969B95 /* Pods_WeatherApp.framework */,
 			);
 			name = Frameworks;
@@ -126,7 +131,13 @@
 				TargetAttributes = {
 					4AEDE0751DBD6B0500AD8B60 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S7PW65BS48;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -214,8 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEDE07C1DBD6B0500AD8B60 /* ViewController.swift in Sources */,
+				4A0DFC211DBEE70B00638903 /* Weather.swift in Sources */,
 				4AEDE08C1DBD7CD700AD8B60 /* WeatherService.swift in Sources */,
+				4A0DFC1D1DBEC9A600638903 /* WeatherViewController.swift in Sources */,
 				4AEDE07A1DBD6B0500AD8B60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +272,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -309,6 +322,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -337,7 +351,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47B762246F24C10EFCAF5FDB /* Pods-WeatherApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S7PW65BS48;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roberthaworth.WeatherApp;
@@ -350,7 +366,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D41D92BDA61E1FD6D0381C6B /* Pods-WeatherApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S7PW65BS48;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roberthaworth.WeatherApp;
