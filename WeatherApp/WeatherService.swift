@@ -80,7 +80,10 @@ class WeatherService {
     }
     
     func weatherReport(cityName:String) {
-        Alamofire.request(serverURL + "?q=\(cityName),\(countryCode)&APPID=\(apiKey)" + prependedOptions(), method: .get, parameters: nil, encoding: JSONEncoding(options:.prettyPrinted), headers: nil).validate().responseJSON { [weak self] response in
+        
+        let sanitizedString = cityName.replacingOccurrences(of: " ", with: "%20")
+        
+        Alamofire.request(serverURL + "?q='\(sanitizedString)',\(countryCode)&APPID=\(apiKey)" + prependedOptions(), method: .get, parameters: nil, encoding: JSONEncoding(options:.prettyPrinted), headers: nil).validate().responseJSON { [weak self] response in
             switch response.result {
                 case .success(let jsonData as Dictionary<String, AnyObject>):
                     self?.currentWeather = Weather(jsonPayload: jsonData)
