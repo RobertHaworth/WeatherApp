@@ -198,7 +198,6 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             location.getWeather(completionBlock: { [weak self] in
                 
                 guard let selfie = self else {
-                    print("self was destroyed")
                     return
                 }
                 if selfie.tableView.isEditing {

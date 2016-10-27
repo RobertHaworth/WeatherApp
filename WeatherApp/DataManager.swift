@@ -95,7 +95,7 @@ class DataManager {
             return locations
             
         } catch {
-            print("man, I should handle errors.")
+            print("Please handle this catch with some kind of action.")
             return nil
         }
     }

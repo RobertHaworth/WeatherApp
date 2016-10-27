@@ -24,7 +24,6 @@ class CoreLocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func requestLocationAuthorization() {
-        print("requesting location authorization")
         
         // Make a placeholder for Current Location even though we can not get the coordinates yet.
         if DataManager.sharedInstance.currentLocation() == nil {

@@ -32,13 +32,6 @@ class WeatherService {
     let apiKey = "4b73d40aee97a52f070e6e24dda1e776"
     let countryCode = "us"
     var currentUnitType = UnitType.imperial.description()
-    
-    var currentWeather:Weather? {
-        didSet {
-            print("Current weather set: \(currentWeather?.description())")
-        }
-    }
-    
 
     static let sharedInstance: WeatherService = {
         return WeatherService()
@@ -60,7 +53,7 @@ class WeatherService {
                     completionBlock(Weather(jsonPayload: jsonData))
                 case .success(let value):
                     print("success without being a JSON dictionary? \(value)")
-                case .failure(let responseError): print("jsonError cityName: \(responseError)")
+                case .failure(let responseError): print("jsonError searchString: \(responseError)")
             }
         }
     }
