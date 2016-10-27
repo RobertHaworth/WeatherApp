@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				4AAA1AD91DC18A5100B47E2C /* WeatherApp.xcdatamodeld */,
+				4A0DFC201DBEE70B00638903 /* Weather.swift */,
 				4AAA1AEA1DC1E98700B47E2C /* Models */,
-				4AAA1AE01DC18CB700B47E2C /* DataManager.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -109,6 +109,24 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		4AAA1AEC1DC1EAF800B47E2C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4AAA1AE51DC1C47400B47E2C /* CoreLocationManager.swift */,
+				4AAA1AE01DC18CB700B47E2C /* DataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		4AAA1AED1DC1EB2C00B47E2C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4AEDE07D1DBD6B0500AD8B60 /* Main.storyboard */,
+				4AEDE0821DBD6B0600AD8B60 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		4AEDE06D1DBD6B0500AD8B60 = {
 			isa = PBXGroup;
 			children = (
@@ -130,15 +148,13 @@
 		4AEDE0781DBD6B0500AD8B60 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				4AAA1AEB1DC1E99A00B47E2C /* Services */,
-				4AAA1AE71DC1E95600B47E2C /* User Interface */,
-				4AAA1AE21DC1903400B47E2C /* Data */,
 				4AEDE0791DBD6B0500AD8B60 /* AppDelegate.swift */,
-				4AAA1AE51DC1C47400B47E2C /* CoreLocationManager.swift */,
-				4A0DFC201DBEE70B00638903 /* Weather.swift */,
-				4AEDE07D1DBD6B0500AD8B60 /* Main.storyboard */,
+				4AAA1AEC1DC1EAF800B47E2C /* Managers */,
+				4AAA1AEB1DC1E99A00B47E2C /* Services */,
+				4AAA1AE21DC1903400B47E2C /* Data */,
+				4AAA1AED1DC1EB2C00B47E2C /* Storyboards */,
+				4AAA1AE71DC1E95600B47E2C /* User Interface */,
 				4AEDE0801DBD6B0600AD8B60 /* Assets.xcassets */,
-				4AEDE0821DBD6B0600AD8B60 /* LaunchScreen.storyboard */,
 				4AEDE0851DBD6B0600AD8B60 /* Info.plist */,
 			);
 			path = WeatherApp;

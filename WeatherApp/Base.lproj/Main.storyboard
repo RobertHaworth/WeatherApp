@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Location Table View Controller-->
+        <!--Weather App-->
         <scene sceneID="MJt-GF-iXi">
             <objects>
                 <tableViewController id="4aB-6A-eTB" customClass="LocationTableViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-wN-8LR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-wN-8LR">
                                             <frame key="frameInset" minX="203" minY="14" width="71" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -132,7 +132,7 @@
                             <outlet property="delegate" destination="4aB-6A-eTB" id="u1O-e2-jTQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qNu-3y-LhZ"/>
+                    <navigationItem key="navigationItem" title="Weather App" id="qNu-3y-LhZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOd-cf-mg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

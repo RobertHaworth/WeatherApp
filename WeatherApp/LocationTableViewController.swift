@@ -43,17 +43,20 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
         
+        searchController.searchBar.placeholder = "Search For Locations"
+        
         // Configure UISearchController
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.delegate = self
         
         mapKitLocalSearchCompleter.delegate = self
+        mapKitLocalSearchCompleter.filterType = .locationsOnly
         
         updateLocations()
         
         
-        updateTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak self] timer in
+        updateTimer = Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) { [weak self] timer in
             if !((self?.searchController.isActive)!) {
                 self?.updateLocations()
             }
@@ -66,7 +69,9 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     // MARK: - MKLocalSearchCompleterDelegate functions
     
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-        userSearchArray = completer.results
+        
+        // Remove all search results that don't have a subtitle
+        userSearchArray = completer.results.filter({ return $0.subtitle != ""})
     }
     
     // MARK: - UISearchResultsUpdating functions

@@ -10,6 +10,10 @@ import UIKit
 import CoreLocation
 import Alamofire
 
+
+// TODO: - Expand user options with settings screen, allow user to choose UnitType, countryCode.
+// MARK: -
+
 enum UnitType {
     case imperial, metric, standard
     
@@ -65,7 +69,6 @@ class WeatherService {
         Alamofire.request(serverURL + "?lat=\(coordinates.coordinate.latitude)&lon=\(coordinates.coordinate.longitude)" + prependedOptions(), method: .get, parameters: nil, encoding: JSONEncoding(options:.prettyPrinted), headers: nil).validate().responseJSON { response in
             switch response.result {
                 case .success(let jsonData as Dictionary<String, AnyObject>):
-                    print("weird...\(jsonData)")
                     completionBlock(Weather(jsonPayload: jsonData))
                 case .success(let value):
                     print("success without being a JSON dictionary? \(value)")
