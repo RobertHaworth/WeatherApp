@@ -8,6 +8,9 @@
 
 import UIKit
 
+// TODO: - Add more enumerations to describe data states better for Weather
+// MARK: -
+
 class Weather {
     
     private let jsonObject:Dictionary<String, AnyObject>
@@ -22,7 +25,7 @@ class Weather {
 
     func cityName() -> String {
         guard let name = jsonObject["name"] as? String else {
-            return "No name found"
+            return "Unknown"
         }
         
         return name
@@ -43,7 +46,6 @@ class Weather {
         
         return currentHumidity
     }
-    
     
     // Helper function to unwrap main structure dictionary
     func mainStructure() -> Dictionary<String, AnyObject> {
